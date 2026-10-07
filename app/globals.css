@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+@page {
+  size: A4 landscape;
+  margin: 12mm;
+}
+
+.print-page {
+  break-after: page;
+  padding: 4px;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .print-page:last-child {
+    break-after: auto;
+  }
+}
